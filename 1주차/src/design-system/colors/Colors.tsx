@@ -1,0 +1,25 @@
+const Colors = {
+  Primary: "#3d8aff",
+  Lighten_2: "#f5f9ff",
+  Lighten_1: "#b1d0ff",
+  default: "#3d8aff",
+  Darken_1: "#1070ff",
+  Darken_2: "#005de8",
+  Gray1: "#ffffff",
+  Gray2: "#f9f9f9",
+  Gray3: "#eeeeee",
+  Gray4: "#DDDDDD",
+  Gray5: "#999999",
+  Gray6: "#555555",
+  Gray7: "#343434",
+  Gray8: "#202020",
+  Gray9: "#121212",
+  Gray10: "#000000",
+  ErrorLighten_2: "#fff0f0",
+  ErrorLighten_1: "#ffd3d3",
+  Default: "#ff4646",
+  ErrorDarken_1: "#c23535",
+  ErrorDarken_2: "#852424",
+};
+
+export default Colors;
