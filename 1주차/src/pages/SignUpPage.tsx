@@ -1,12 +1,9 @@
 import styled from "styled-components";
 import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
-import { Id } from "../components/IdPassword/Id";
-import { Password } from "../components/IdPassword/Password";
-import { SetStateAction } from "react";
+import { Input } from "../components/Inputs";
 
 export const SignUpPage = () => {
-
   return (
     <SignUpAll>
       <SignUpContents>
@@ -15,15 +12,20 @@ export const SignUpPage = () => {
           <TitleLine />
         </TitleAll>
         <IdPasswordAll>
-          <Id />
-          <Password
-            setPassword={function (value: SetStateAction<string>): void {
-            }}
+          <Input
+            type="text"
+            placeholder="아이디를 입력해주세요."
+            label="아이디"
           />
-          <Password
-            setPassword={function (value: SetStateAction<string>): void {
-              throw new Error("Function not implemented.");
-            }}
+          <Input
+            type="password"
+            placeholder="비밀번호를 입력해주세요."
+            label="비밀번호"
+          />
+          <Input
+            type="password"
+            placeholder="비밀번호를 입력해주세요."
+            label="비밀번호"
           />
         </IdPasswordAll>
         <SignUpBtn>회원가입</SignUpBtn>
