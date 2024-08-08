@@ -3,8 +3,10 @@ import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 import { Id } from "../components/IdPassword/Id";
 import { Password } from "../components/IdPassword/Password";
+import { SetStateAction } from "react";
 
 export const SignUpPage = () => {
+
   return (
     <SignUpAll>
       <SignUpContents>
@@ -14,8 +16,15 @@ export const SignUpPage = () => {
         </TitleAll>
         <IdPasswordAll>
           <Id />
-          <Password />
-          <Password />
+          <Password
+            setPassword={function (value: SetStateAction<string>): void {
+            }}
+          />
+          <Password
+            setPassword={function (value: SetStateAction<string>): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
         </IdPasswordAll>
         <SignUpBtn>회원가입</SignUpBtn>
       </SignUpContents>
