@@ -5,16 +5,24 @@ import OpenEye from "../../assets/OpenEye.svg";
 import CloseEye from "../../assets/CloseEye.svg";
 import { useState } from "react";
 
-export const Password = ({ password, setPassword }) => {
+export const Password = ({
+  password,
+  setPassword,
+}: {
+  password?: string;
+  setPassword: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const [showPswd, setShowPswd] = useState(false);
 
-  const handleChandePassword = (e) => {
+  const handleChandePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
   const toggleShowPswd = () => {
     setShowPswd((prevShowPswd) => !prevShowPswd);
   };
+
+  
 
   return (
     <PasswordAll>

@@ -1,8 +1,8 @@
 import "./App.css";
-import { SignUpPage } from "./pages/SignUpPage";
+import { AppRouter } from "./Router";
 
 function App() {
-  return <SignUpPage />;
+  return <AppRouter />;
 }
 
 export default App;
