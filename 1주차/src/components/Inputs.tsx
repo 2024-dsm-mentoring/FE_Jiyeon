@@ -11,12 +11,14 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export const Input = ({ label, placeholder, type, ...props }: InputProps) => {
   const [showPswd, setShowPswd] = useState<boolean>(false);
+  const [id, setId] = useState("");
 
   if (type == "text") {
     return (
       <All>
         <Title>{label} </Title>
         <InputContainer
+          value={id}
           placeholder={placeholder}
           type={type}
           {...props}
