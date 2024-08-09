@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Colors from "../design-system/colors/Colors";
 import fonts from "../design-system/fonts/fonts";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { Eyes } from "../assets/Eyes";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -13,12 +13,19 @@ export const Input = ({ label, placeholder, type, ...props }: InputProps) => {
   const [showPswd, setShowPswd] = useState<boolean>(false);
   const [id, setId] = useState("");
 
+  const handleChange = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
+    setId(event.target.value);
+  };
+
   if (type == "text") {
     return (
       <All>
         <Title>{label} </Title>
         <InputContainer
           value={id}
+          onChange={handleChange}
           placeholder={placeholder}
           type={type}
           {...props}
