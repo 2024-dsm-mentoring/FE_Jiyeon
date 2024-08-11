@@ -3,9 +3,18 @@ import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 // import { Id } from "../components/IdPassword/Id";
 // import { Password } from "../components/IdPassword/Password";
+import { useState } from "react";
+
 import { Input } from "../components/Inputs";
 
 export const LoginPage = () => {
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleChangeId = (e) => {
+    setId(e.target.value);
+  };
+
   return (
     <LoginAll>
       <LoginContents>
@@ -18,11 +27,15 @@ export const LoginPage = () => {
             type="text"
             label="아이디"
             placeholder="아이디를 입력해주세요."
+            onChange={handleChangeId}
+            value={id}
           />
           <Input
             type="password"
             label="비밀번호"
             placeholder="비밀번호를 입력해주세요."
+            password={password}
+            setPassword={setPassword}
           />
         </IdPasswordAll>
         <LoginBtn>로그인</LoginBtn>
