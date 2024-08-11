@@ -1,31 +1,37 @@
 import styled from "styled-components";
 import Colors from "../design-system/colors/Colors";
 import fonts from "../design-system/fonts/fonts";
-import { SetStateAction, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { Eyes } from "../assets/Eyes";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   type?: string;
   label?: string;
+  password?: string;
+  setPassword?: (value: string) => void;
 }
 
-export const Input = ({ label, placeholder, type, ...props }: InputProps) => {
-  const [showPswd, setShowPswd] = useState<boolean>(false);
-  const [id, setId] = useState("");
-
-  const handleChange = (event: {
-    target: { value: SetStateAction<string> };
-  }) => {
-    setId(event.target.value);
+export const Input = ({
+  label,
+  placeholder,
+  type,
+  password,
+  setPassword,
+  ...props
+}: InputProps) => {
+  const handleChangePassword = (e: ChangeEvent<HTMLInputElement>) => {
+    if (setPassword) {
+      setPassword(e.target.value);
+    }
   };
+
+  const [showPswd, setShowPswd] = useState<boolean>(false);
 
   if (type == "text") {
     return (
       <All>
         <Title>{label} </Title>
         <InputContainer
-          value={id}
-          onChange={handleChange}
           placeholder={placeholder}
           type={type}
           {...props}
@@ -41,6 +47,8 @@ export const Input = ({ label, placeholder, type, ...props }: InputProps) => {
             placeholder={placeholder}
             type={showPswd ? "text" : "password"}
             {...props}
+            onChange={handleChangePassword}
+            value={password}
           ></InputContainer>
           <PassWordEye onClick={() => setShowPswd(!showPswd)}>
             <Eyes isEye={showPswd} />
