@@ -2,8 +2,16 @@ import styled from "styled-components";
 import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 import { Input } from "../components/Inputs";
+import { useState } from "react";
 
 export const SignUpPage = () => {
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleChangeId = (e) => {
+    setId(e.target.value);
+  };
+
   return (
     <SignUpAll>
       <SignUpContents>
@@ -16,11 +24,15 @@ export const SignUpPage = () => {
             type="text"
             placeholder="아이디를 입력해주세요."
             label="아이디"
+            onChange={handleChangeId}
+            value={id}
           />
           <Input
             type="password"
             placeholder="비밀번호를 입력해주세요."
             label="비밀번호"
+            password={password}
+            setPassword={setPassword}
           />
           <Input
             type="password"
