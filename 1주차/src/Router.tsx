@@ -4,6 +4,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { PostListInquiryPage } from "./pages/PostListInquiryPage";
 import { NoticeModificationPage } from "./pages/NoticeModificationPage";
 import { PostListWritePage } from "./pages/PostListWritePage";
+import { CheckNoticeDetailsPage } from "./pages/CheckNoticeDetailsPage";
 
 export const AppRouter = () => {
   return (
@@ -17,6 +18,10 @@ export const AppRouter = () => {
           element={<NoticeModificationPage />}
         />
         <Route path="/PostListWrite" element={<PostListWritePage />} />
+        <Route
+          path="/CheckNoticeDetails"
+          element={<CheckNoticeDetailsPage />}
+        />
       </Routes>
     </BrowserRouter>
   );
