@@ -1,8 +1,8 @@
-import { OptionSelector } from "./../components/PostListInquiryPage/OptionSelector";
 import styled from "styled-components";
 import fonts from "../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 import { PostList } from "../components/PostListInquiryPage/PostList";
+import { OptionSelector } from "./../components/PostListInquiryPage/OptionSelector";
 
 export const PostListInquiryPage = () => {
   return (

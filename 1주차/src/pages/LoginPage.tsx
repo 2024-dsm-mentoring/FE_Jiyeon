@@ -3,28 +3,8 @@ import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 // import { Id } from "../components/IdPassword/Id";
 // import { Password } from "../components/IdPassword/Password";
-<<<<<<< Updated upstream
-import { useState } from "react";
-
 import { Input } from "../components/Inputs";
-
-export const LoginPage = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleChangeId = (e) => {
-    setId(e.target.value);
-  };
-
-=======
-<<<<<<< Updated upstream
-import { Input } from "../components/Inputs";
-
-export const LoginPage = () => {
-=======
 import { SetStateAction, useState } from "react";
-
-import { Input } from "../components/Inputs";
 
 export const LoginPage = () => {
   const [id, setId] = useState("");
@@ -34,8 +14,6 @@ export const LoginPage = () => {
     setId(e.target.value);
   };
 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   return (
     <LoginAll>
       <LoginContents>

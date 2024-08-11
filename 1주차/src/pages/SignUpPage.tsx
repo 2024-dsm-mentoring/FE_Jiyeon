@@ -2,13 +2,13 @@ import styled from "styled-components";
 import fonts from "./../design-system/fonts/fonts";
 import Colors from "../design-system/colors/Colors";
 import { Input } from "../components/Inputs";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 export const SignUpPage = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleChangeId = (e) => {
+  const handleChangeId = (e: { target: { value: SetStateAction<string>; }; }) => {
     setId(e.target.value);
   };
 
