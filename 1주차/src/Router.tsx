@@ -3,6 +3,7 @@ import { SignUpPage } from "./pages/SignUpPage";
 import { LoginPage } from "./pages/LoginPage";
 import { PostListInquiryPage } from "./pages/PostListInquiryPage";
 import { NoticeModificationPage } from "./pages/NoticeModificationPage";
+import { PostListWritePage } from "./pages/PostListWritePage";
 
 export const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ export const AppRouter = () => {
           path="/NoticeModification"
           element={<NoticeModificationPage />}
         />
+        <Route path="/PostListWrite" element={<PostListWritePage />} />
       </Routes>
     </BrowserRouter>
   );
