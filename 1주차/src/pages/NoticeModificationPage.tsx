@@ -58,4 +58,9 @@ const EditCompletedBtn = styled.button`
   padding: 14px 572px;
   font-size: 15px;
   font-weight: 500;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
 `;
