@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import fonts from "../../design-system/fonts/fonts";
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> LoginPage
 
 export const PostList = () => {
   return (
