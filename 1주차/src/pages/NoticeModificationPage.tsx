@@ -3,6 +3,7 @@ import Colors from "../design-system/colors/Colors";
 import fonts from "../design-system/fonts/fonts";
 import BeforeAfter from "../assets/BeforeAfterImg.svg";
 import { PostInput } from "../components/PostInput";
+import { Button } from "../components/Button";
 
 export const NoticeModificationPage = () => {
   return (
@@ -14,7 +15,7 @@ export const NoticeModificationPage = () => {
       </TitleAll>
       <WritingContents>
         <PostInput />
-        <EditCompletedBtn>수정완료</EditCompletedBtn>
+        <Button value="수정완료"></Button>
       </WritingContents>
     </PageContentsAll>
   );
@@ -50,17 +51,4 @@ const TitleBefore = styled.h6`
 const TitleAfter = styled.h6`
   font: ${fonts.title3};
   color: ${Colors.Gray6};
-`;
-
-const EditCompletedBtn = styled.button`
-  background-color: ${Colors.Primary};
-  color: ${Colors.Gray1};
-  padding: 14px 572px;
-  font-size: 15px;
-  font-weight: 500;
-
-  &:focus {
-    outline: none;
-    border: none;
-  }
 `;
